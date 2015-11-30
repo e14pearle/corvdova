@@ -8,6 +8,9 @@ function buildMainMenu() {
 	var html = '';
 	
 	html = html + '<div id="e14header"><img src="assets/pics/img_banner_header_e14.png" /></div>';
+	
+	html = html + '<div class="menu_option">This is a menu option</div>';
+	
 	// start table
 	html = html + '<div>'
 	html = html + '<table style="background:' + appStyle.tblMenuColour + '; border:none" width="320px" cellspacing="0" cellpadding="0">';
@@ -46,8 +49,8 @@ function buildMenuOption(icon,  text, optionId) {
 	var onClick = "loadPage('" + optionId + "');";
 	
 	html = html + '<tr style="background:' + appStyle.tblBGColour + '; height:' + appStyle.tblRowHeight + 'px; ">';
-		html = html + '<td style="padding:5px; width:30px;  border-bottom: solid 1px #999999;"><img src = "' + icon + '" /></td>';
-		html = html + '<td style="padding:5px;  border-bottom: solid 1px #999999;" onclick="' + onClick + '"><span style="font-Size:' + appStyle.tblFont.fontSize + 'px; font-Weight:' + appStyle.tblFont.fontWeight + '">' + text + '</span></td>';
+		html = html + '<td style="padding:5px; width:30px;  border-bottom: solid 1px #848589;"><img src = "' + icon + '" /></td>';
+		html = html + '<td style="padding:5px;  border-bottom: solid 1px #848589;" onclick="' + onClick + '"><span style="font-Size:' + appStyle.tblFont.fontSize + 'px; font-Weight:' + appStyle.tblFont.fontWeight + '; color:#848589">' + text + '</span></td>';
 	html = html + '</tr>';
 	
 	return html;
