@@ -9,7 +9,48 @@ function buildMainMenu() {
 	
 	html = html + '<div id="e14header"><img src="assets/pics/img_banner_header_e14.png" /></div>';
 	
-	html = html + '<div class="menu_option">This is a menu option</div>';
+	html = html + '<div class="menu-option">';
+		html = html + '<div>';
+			html = html + '<div class="menu-image">';
+				html = html + '<img src="assets/pics/icon_search_blue.png" />';
+			html = html + '</div>';
+			html = html + '<div class="menu-text">';
+				html = html + 'Product Search';
+			html = html + '</div>';
+		html = html + '</div>';
+	html = html + '</div>';
+	
+	html = html + '<hr>';
+	
+	html = html + '<div class="menu-option">';
+		html = html + '<div>';
+			html = html + '<div class="menu-image">';
+				html = html + '<img src="assets/pics/icon_search_blue.png" />';
+			html = html + '</div>';
+			html = html + '<div class="menu-text">';
+				html = html + 'Parts List';
+			html = html + '</div>';
+		html = html + '</div>';
+	html = html + '</div>';
+	
+	html = html + '<hr>';
+	
+	
+	html = html + '<hr>';
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	// start table
 	html = html + '<div>'

@@ -1,3 +1,39 @@
 .menu_option {
 	color:#848589;
 }
+
+@media screen {
+  .menu-option {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .menu-option > div {
+    display: table-row;
+  }
+
+  .menu-option .menu-image {
+    display: table-cell;
+	padding: 5px;
+	width: 30px;
+  }
+  
+  .menu-option .menu-text {
+    display: table-cell;
+	padding: 5px;
+	font-size: 18px;
+	font-weight: bold;
+    color:#848589;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /** reset all thumbnail gallery elements to display as block and fill screen **/
+  .menu-option,
+  .menu-option > div,
+  .menu-option .menu-image {
+    display: block;
+    width: 100%;
+  }
+}
