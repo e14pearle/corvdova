@@ -2,6 +2,10 @@
 	color:#848589;
 }
 
+.menu_seperator {
+	color:#848589;
+}
+
 @media screen {
   .menu-option {
     display: table;

@@ -2,59 +2,22 @@
 /**
  * Build and inject the html for the main menu.
  * Static values (e.g. styles are defined in e14_static.js, which is defined in the calling page (see index.html)
+ *
+ * menu is constructed using divs in a table - like format - each row is separated by an <HR> tag to reprpduce the style of the original app
+ 
  **/
 function buildMainMenu() {
 	
 	var html = '';
 	
+	// header image
 	html = html + '<div id="e14header"><img src="assets/pics/img_banner_header_e14.png" /></div>';
-	
-	html = html + '<div class="menu-option">';
-		html = html + '<div>';
-			html = html + '<div class="menu-image">';
-				html = html + '<img src="assets/pics/icon_search_blue.png" />';
-			html = html + '</div>';
-			html = html + '<div class="menu-text">';
-				html = html + 'Product Search';
-			html = html + '</div>';
-		html = html + '</div>';
-	html = html + '</div>';
-	
-	html = html + '<hr>';
-	
-	html = html + '<div class="menu-option">';
-		html = html + '<div>';
-			html = html + '<div class="menu-image">';
-				html = html + '<img src="assets/pics/icon_search_blue.png" />';
-			html = html + '</div>';
-			html = html + '<div class="menu-text">';
-				html = html + 'Parts List';
-			html = html + '</div>';
-		html = html + '</div>';
-	html = html + '</div>';
-	
-	html = html + '<hr>';
-	
-	
-	html = html + '<hr>';
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	// start table
 	html = html + '<div>'
-	html = html + '<table style="background:' + appStyle.tblMenuColour + '; border:none" width="320px" cellspacing="0" cellpadding="0">';
+	//html = html + '<table style="background:' + appStyle.tblMenuColour + '; border:none" width="320px" cellspacing="0" cellpadding="0">';
+	
+	html = html + '<div class="menu-option">';
 	
 	// menu options
 	html = html + buildMenuOption("assets/pics/icon_search_blue.png", "Product Search", 1);
@@ -81,18 +44,27 @@ function buildMainMenu() {
 }
 
 /*
- * Build an individual menu option. Note styling defined in static values in e14_statics.js
+ * Build an individual menu option. 
+ * It looks like a table - but is built using divs (see http://programmers.stackexchange.com/questions/277778/why-are-people-making-tables-with-divs)
  */
 function buildMenuOption(icon,  text, optionId) {
 
 	var html = '';
 	
 	var onClick = "loadPage('" + optionId + "');";
+	html = html + '<div class="menu-option">';
+		html = html + '<div onclick="' + onClick + '">';
+			html = html + '<div class="menu-image">';
+				html = html + '<img src="' + icon + '" />';
+			html = html + '</div>';
+			html = html + '<div class="menu-text">';
+				html = html + text;
+			html = html + '</div>';
+		html = html + '</div>';
+	html = html + '</div>';
 	
-	html = html + '<tr style="background:' + appStyle.tblBGColour + '; height:' + appStyle.tblRowHeight + 'px; ">';
-		html = html + '<td style="padding:5px; width:30px;  border-bottom: solid 1px #848589;"><img src = "' + icon + '" /></td>';
-		html = html + '<td style="padding:5px;  border-bottom: solid 1px #848589;" onclick="' + onClick + '"><span style="font-Size:' + appStyle.tblFont.fontSize + 'px; font-Weight:' + appStyle.tblFont.fontWeight + '; color:#848589">' + text + '</span></td>';
-	html = html + '</tr>';
+	// Separate each row with an <HR>
+	html = html + '<hr class="menu_seperator">';
 	
 	return html;
 }
