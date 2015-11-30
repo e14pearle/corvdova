@@ -19,16 +19,18 @@
 
   .menu-option .menu-image {
     display: table-cell;
-	padding: 5px;
+	padding: 3px;
 	width: 30px;
+	vertical-align: middle;
   }
   
   .menu-option .menu-text {
     display: table-cell;
-	padding: 5px;
+	padding: 3px;
 	font-size: 18px;
 	font-weight: bold;
     color:#848589;
+	vertical-align: middle;
   }
 }
 
@@ -40,4 +42,12 @@
     display: block;
     width: 100%;
   }
+}
+
+.header_bar {
+	padding : 5px;
+	color : #ffffff;
+	background: #888888;
+	font-size: 15px;
+	font-weight: bold;
 }
